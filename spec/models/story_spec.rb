@@ -3,6 +3,8 @@ require 'spec_helper'
 describe Story do
   let!(:story) {FactoryGirl.create(:story)}
 
+  it {should have_many(:votes).through(:scores).source(:users)}
+
   it {should belong_to(:user)}
   it {should validate_presence_of(:url)}
   it {should validate_presence_of(:user_id)}

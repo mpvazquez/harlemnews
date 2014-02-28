@@ -3,7 +3,7 @@ Harlemnews::Application.routes.draw do
   resources :users do
     # resources :stories, only: [:create, :new]
   end
-
+  resources :votes
   resources :stories #, except: [:create, :new]
 
   get "/login", to: "session#new"

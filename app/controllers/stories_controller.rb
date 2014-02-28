@@ -3,6 +3,7 @@ class StoriesController < ApplicationController
   include GetTitle
 
   def index
+    @vote = Vote.new
     @stories = Story.all
   end
 
