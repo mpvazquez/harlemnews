@@ -14,6 +14,7 @@
     <%= link_to "Join Us", new_user_path %>
   <% else %>
     <%= link_to "Logout", "/session", method: "delete" %>
+    <%= link_to "Post", new_story_path %>
   <% end %>
   </header>
 <%= yield %>

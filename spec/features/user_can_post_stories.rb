@@ -4,9 +4,10 @@ describe "User can post new stories" do
   let!(:user) {FactoryGirl.create :user}
 
   it "lets user post new stories" do
+    
     visit root_path
     expect(page).not_to have_content("Post")
-    visit new_user_story_path
+    visit new_story_path
     expect(page).to have_content("HOME")
 
 
@@ -15,8 +16,7 @@ describe "User can post new stories" do
     expect(page).to have_content("Post")
     click_link "Post"
 
-
-    fill_in(:url, with: "http://www.google.com")
+    fill_in(:story_url, with: "https://www.google.com")
 
     click_button "Post"
 
