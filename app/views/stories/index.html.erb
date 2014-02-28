@@ -1,0 +1,5 @@
+<% @stories.each do |story| %>
+<%= link_to(story.title, story.url) %>
+<%= story.user.username %>
+<%= story.created_at %>
+<% end %>
